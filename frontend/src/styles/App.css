@@ -1,0 +1,35 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.main-content {
+  flex: 1;
+  min-height: calc(100vh - 70px);
+  background-color: #f9fafb;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Для аутентифицированных пользователей */
+.App:has(.navbar) .main-content {
+  margin-top: 70px;
+}
+
+/* Для неаутентифицированных пользователей */
+.App:not(:has(.navbar)) .main-content {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    min-height: calc(100vh - 60px);
+  }
+  
+  .App:has(.navbar) .main-content {
+    margin-top: 60px;
+  }
+} 
