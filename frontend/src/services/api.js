@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 // Базовая конфигурация API
-const API_BASE_URL = 'https://api.rakhmatullo.me';
+const API_BASE_URL = 'https://api.rakhmatullo.me/api/v1';
 
 // Создание экземпляра axios
 const api = axios.create({
